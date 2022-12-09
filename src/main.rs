@@ -1,19 +1,12 @@
-/*
- * @Author: thelostword
- * @Date: 2022-12-09 12:27:32
- * @LastEditors: thelostword
- * @LastEditTime: 2022-12-09 12:42:17
- * @FilePath: \github_hosts_updater\src\main.rs
- */
 use std::fs::{read_to_string, write};
 use regex::Regex;
 
 
 #[cfg(target_os = "macos")]
-static HOSTS_PATH: &str = "/etc/";
+static HOSTS_PATH: &str = "/etc/hosts";
 
 #[cfg(target_os = "linux")]
-static HOSTS_PATH: &str = "/etc/";
+static HOSTS_PATH: &str = "/etc/hosts";
 
 #[cfg(target_os = "windows")]
 static HOSTS_PATH: &str = "C:\\Windows\\System32\\drivers\\etc\\hosts";
